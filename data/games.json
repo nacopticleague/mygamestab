@@ -627,17 +627,6 @@
     "s2": ""
   },
   {
-    "t1": "EB (2)",
-    "t2": "Holmdel",
-    "div": "HS-NJ",
-    "date": "2026-05-30",
-    "time": "12:00 PM",
-    "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "Philadelphia",
     "t2": "Bayonne 1 (SASA)",
     "div": "HS-NJ",
@@ -764,6 +753,17 @@
     "div": "Mens",
     "date": "2026-05-17",
     "time": "8:00 PM",
+    "v": "EB",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
+    "t1": "EB (2)",
+    "t2": "Holmdel",
+    "div": "HS-NJ",
+    "date": "2026-05-30",
+    "time": "12:00 PM",
     "v": "EB",
     "winner": "",
     "s1": "",
