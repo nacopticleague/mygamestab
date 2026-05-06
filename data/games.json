@@ -451,17 +451,6 @@
     "s2": ""
   },
   {
-    "t1": "Long Island",
-    "t2": "Bayonne 1 (SASA)",
-    "div": "College",
-    "date": "2026-05-30",
-    "time": "5:00 PM",
-    "v": "BK",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "Bayonne 2 (VMSJ)",
     "t2": "Bayonne 1 (SASA)",
     "div": "College",
@@ -710,6 +699,17 @@
     "date": "2026-05-30",
     "time": "12:00 PM",
     "v": "EB",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
+    "t1": "Long Island",
+    "t2": "Bayonne 1 (SASA)",
+    "div": "College",
+    "date": "2026-05-30",
+    "time": "5:00 PM",
+    "v": "BK",
     "winner": "",
     "s1": "",
     "s2": ""
