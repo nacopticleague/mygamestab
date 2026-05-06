@@ -418,17 +418,6 @@
     "s2": ""
   },
   {
-    "t1": "Belleville",
-    "t2": "Brooklyn",
-    "div": "Girls",
-    "date": "2026-06-06",
-    "time": "12:00 PM",
-    "v": "BK",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "Holmdel",
     "t2": "Upstate",
     "div": "Girls",
@@ -765,6 +754,17 @@
     "date": "2026-06-06",
     "time": "4:00 PM",
     "v": "EB",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
+    "t1": "Belleville",
+    "t2": "Brooklyn",
+    "div": "Girls",
+    "date": "2026-06-06",
+    "time": "12:00 PM",
+    "v": "BK",
     "winner": "",
     "s1": "",
     "s2": ""
