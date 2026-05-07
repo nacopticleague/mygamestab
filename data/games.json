@@ -407,6 +407,17 @@
     "s2": ""
   },
   {
+    "t1": "EB (1)",
+    "t2": "West Side",
+    "div": "JHS",
+    "date": "2026-05-16",
+    "time": "9:00 AM",
+    "v": "EB",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "Summit",
     "t2": "Philadelphia",
     "div": "JHS",
@@ -698,17 +709,6 @@
     "div": "Mens",
     "date": "2026-05-17",
     "time": "8:00 PM",
-    "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "EB (1)",
-    "t2": "West Side",
-    "div": "JHS",
-    "date": "2026-05-16",
-    "time": "9:00 AM",
     "v": "EB",
     "winner": "",
     "s1": "",
