@@ -429,6 +429,17 @@
     "s2": ""
   },
   {
+    "t1": "Brooklyn",
+    "t2": "Bayonne 2 (VMSJ)",
+    "div": "JHS",
+    "date": "2026-05-16",
+    "time": "1:00 PM",
+    "v": "SJN",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "SI1",
     "t2": "SI2",
     "div": "JHS",
@@ -710,17 +721,6 @@
     "date": "2026-05-17",
     "time": "8:00 PM",
     "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "Brooklyn",
-    "t2": "Bayonne 2 (VMSJ)",
-    "div": "JHS",
-    "date": "2026-05-16",
-    "time": "1:00 PM",
-    "v": "SJN",
     "winner": "",
     "s1": "",
     "s2": ""
