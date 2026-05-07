@@ -462,6 +462,17 @@
     "s2": ""
   },
   {
+    "t1": "Belleville",
+    "t2": "Astoria",
+    "div": "Girls",
+    "date": "2026-05-16",
+    "time": "12:00 PM",
+    "v": "BK",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "Upstate",
     "t2": "Philadelphia",
     "div": "College",
@@ -688,17 +699,6 @@
     "date": "2026-05-17",
     "time": "8:00 PM",
     "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "Belleville",
-    "t2": "Astoria",
-    "div": "Girls",
-    "date": "2026-05-16",
-    "time": "12:00 PM",
-    "v": "BK",
     "winner": "",
     "s1": "",
     "s2": ""
