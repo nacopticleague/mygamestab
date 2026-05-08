@@ -3,62 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Games – 2026 Regular Season</title>
+<title>My Games – 2026 NA Coptic League</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap');
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;display:flex;flex-direction:column;}
-.header{background:#7d1a1a;padding:26px 20px 22px;text-align:center;position:relative;overflow:hidden;}
-.header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c9b5a5,#e07878,#c9b5a5);}
-.header h1{font-family:'Playfair Display',Georgia,serif;font-size:1.55rem;color:#e8b4b4;font-weight:800;letter-spacing:.02em;}
-.header .sub{font-size:.72rem;color:#c98a8a;margin-top:4px;letter-spacing:.12em;font-weight:600;}
-.notice{padding:10px 16px;font-size:.78rem;font-weight:600;color:#5c1010;background:#e8ddd3;text-align:center;border-bottom:1px solid #d0bfaf;}
-.filters{background:#d8c8ba;border-bottom:2px solid #b8a492;padding:16px 16px 14px;}
-.filter-row{display:flex;gap:12px;flex-wrap:wrap;max-width:700px;margin:0 auto;}
-.fg{flex:1;min-width:140px;}
-.fg label{display:block;font-size:.68rem;font-weight:700;color:#5c1010;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px;}
-.fg select{width:100%;padding:9px 12px;border:2px solid #b8a492;border-radius:6px;font-size:.88rem;font-weight:600;color:#5c1010;background:#fff;cursor:pointer;transition:border-color .2s;}
-.fg select:focus{outline:none;border-color:#7d1a1a;box-shadow:0 0 0 3px rgba(125,26,26,.15);}
-.fg select:disabled{opacity:.5;cursor:not-allowed;}
-.main{max-width:700px;margin:0 auto;padding:20px 14px 40px;flex:1;width:100%;}
-.empty{background:#fff;border-radius:12px;text-align:center;padding:48px 24px;box-shadow:0 2px 14px rgba(80,20,20,.08);}
-.empty .icon{font-size:2.6rem;margin-bottom:12px;}
-.empty h3{font-family:'Playfair Display',Georgia,serif;color:#7d1a1a;font-size:1.05rem;margin-bottom:6px;}
-.empty p{font-size:.85rem;color:#666;line-height:1.65;}
-.statsbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;}
-.badge{display:inline-flex;align-items:center;gap:7px;background:#7d1a1a;color:#fff;padding:8px 16px 8px 12px;border-radius:20px;font-size:.9rem;font-weight:700;}
-.badge .dot{width:8px;height:8px;border-radius:50%;background:#e07878;}
-.cnt{font-size:.78rem;color:#5c1010;font-weight:600;}
-.day-section{margin-bottom:26px;}
-.day-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
-.day-name{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;font-weight:700;color:#5c1010;white-space:nowrap;}
-.day-count{font-size:.7rem;font-weight:700;color:#fff;background:#7d1a1a;padding:2px 9px;border-radius:10px;white-space:nowrap;}
-.day-line{flex:1;height:1px;background:#b8a492;}
-.card{background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(80,20,20,.08);padding:16px;margin-bottom:12px;border-left:4px solid #7d1a1a;transition:transform .15s,box-shadow .15s;}
-.card:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(80,20,20,.13);}
-.card.win{border-left-color:#1a7d1a;}
-.card.loss{border-left-color:#a02020;}
-.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
-.time-main{font-family:'Playfair Display',Georgia,serif;font-size:.85rem;font-weight:700;color:#7d1a1a;}
-.result{display:inline-block;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:6px;}
-.result.w{background:#1a7d1a;color:#fff;}
-.result.l{background:#a02020;color:#fff;}
-.result.tbd{background:#b8a492;color:#fff;}
-.matchup{font-weight:700;font-size:1.05rem;color:#222;line-height:1.4;margin-bottom:8px;}
-.matchup .vs{color:#7d1a1a;font-size:.85rem;font-weight:800;margin:0 6px;}
-.venue-tag{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;font-weight:600;color:#555;}
-.venue-tag a{color:#2d3a8c;text-decoration:underline;}
-.spinner{display:inline-block;width:24px;height:24px;border:3px solid #e8ddd3;border-top-color:#7d1a1a;border-radius:50%;animation:spin .8s linear infinite;margin-bottom:12px;}
-@keyframes spin{to{transform:rotate(360deg);}}
-@media(max-width:520px){.filter-row{flex-direction:column;}.fg{min-width:100%;}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #fff; min-height: 100vh; display: flex; flex-direction: column; color: #1a1a1a; }
+
+/* ── Section title style ── */
+.section { max-width: 700px; margin: 0 auto; padding: 22px 18px; }
+.section-title { font-family: Arial, sans-serif; font-weight: 700; font-size: 1.2rem; color: #7d1a1a; text-align: center; margin-bottom: 14px; }
+
+/* ── Filters ── */
+.filters { background: #fff; padding: 16px; }
+.filter-row { display: flex; gap: 12px; flex-wrap: wrap; max-width: 700px; margin: 0 auto; }
+.fg { flex: 1; min-width: 140px; }
+.fg label { display: block; font-family: Arial, sans-serif; font-style: italic; font-size: 0.72rem; font-weight: 700; color: #5c1010; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 6px; text-align: center; }
+.fg select { width: 100%; padding: 10px 12px; border: 2px solid #b8901c; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.9rem; font-weight: 600; color: #5c1010; background: #fff; cursor: pointer; }
+.fg select:focus { outline: 2px solid #d4a73a; border-color: #d4a73a; }
+.fg select:disabled { opacity: .55; cursor: not-allowed; }
+
+/* ── Main ── */
+.main { max-width: 700px; margin: 0 auto; padding: 22px 14px 40px; flex: 1; width: 100%; }
+
+/* ── Empty ── */
+.empty { background: #fff; border-radius: 8px; text-align: center; padding: 44px 22px; box-shadow: 0 2px 10px rgba(80,20,20,.08); }
+.empty .icon { font-size: 2.4rem; margin-bottom: 10px; }
+.empty h3 { font-family: Arial, sans-serif; font-style: italic; color: #7d1a1a; font-size: 1.05rem; margin-bottom: 8px; font-weight: 700; }
+.empty p { font-size: 0.92rem; color: #555; line-height: 1.6; }
+
+/* ── Stats bar ── */
+.statsbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+.badge { display: inline-flex; align-items: center; gap: 7px; background: #7d1a1a; color: #d4a73a; padding: 7px 16px 7px 11px; border-radius: 22px; font-family: Arial, sans-serif; font-size: 0.9rem; font-weight: 700; box-shadow: 0 2px 6px rgba(125,26,26,.25); border: 1px solid #d4a73a; }
+.badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #d4a73a; }
+.cnt { font-size: 0.85rem; color: #5c1010; font-weight: 600; }
+
+/* ── Day section ── */
+.day-section { margin-bottom: 24px; }
+.day-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; padding: 6px 0; }
+.day-name { font-family: Arial, sans-serif; font-style: italic; font-size: 1rem; font-weight: 700; color: #5c1010; white-space: nowrap; }
+.day-count { font-size: 0.7rem; font-weight: 700; color: #5c1010; background: #d4a73a; padding: 2px 9px; border-radius: 10px; white-space: nowrap; border: 1px solid #b8901c; }
+.day-line { display: none; }
+
+/* ── Game card ── */
+.card { background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(80,20,20,.08); padding: 14px 16px 14px 20px; margin-bottom: 10px; transition: box-shadow .15s; position: relative; overflow: hidden; }
+.card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #7d1a1a; }
+.card:hover { box-shadow: 0 4px 14px rgba(80,20,20,.13); }
+.card.win::before { background: #1a7d1a; }
+.card.loss::before { background: #a02020; }
+.card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.time-main { font-family: Arial, sans-serif; font-size: 0.85rem; font-weight: 700; color: #7d1a1a; }
+.result { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 5px; letter-spacing: 0.04em; }
+.result.w { background: #1a7d1a; color: #fff; }
+.result.l { background: #a02020; color: #fff; }
+.result.tbd { background: #d4a73a; color: #5c1010; border: 1px solid #b8901c; }
+.matchup { font-weight: 700; font-size: 1.02rem; color: #1a1a1a; line-height: 1.4; margin-bottom: 6px; }
+.matchup .vs { color: #d4a73a; font-style: italic; font-size: 0.85rem; font-weight: 700; margin: 0 6px; }
+.venue-tag { display: inline-flex; align-items: center; gap: 4px; font-size: 0.78rem; font-weight: 600; color: #555; }
+.venue-tag a { color: #2d3a8c; text-decoration: underline; font-weight: 600; }
+.venue-tag a:hover { color: #1a2670; }
+
+/* ── Spinner ── */
+.spinner { display: inline-block; width: 28px; height: 28px; border: 3px solid #e8d8b8; border-top-color: #7d1a1a; border-radius: 50%; animation: spin .8s linear infinite; margin-bottom: 12px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media(max-width:520px) {
+  .filter-row { flex-direction: column; }
+  .fg { min-width: 100%; }
+}
 </style>
 </head>
 <body>
-<div class="header">
-  <h1>🏀 My Games</h1>
-  <div class="sub">NA Coptic League · 2026 Season · May 2026 – July 2026</div>
+
+<div class="section">
+  <div class="section-title">🏀 My Games</div>
 </div>
-<div class="notice">Games are still being added.</div>
+
 <div class="filters">
   <div class="filter-row">
     <div class="fg">
@@ -81,6 +99,7 @@ body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;
     </div>
   </div>
 </div>
+
 <div class="main"><div id="out">
   <div class="empty"><div class="icon">🏀</div><h3>Find Your Team's Schedule</h3><p>Select your division and team above<br>to view your team schedule.</p></div>
 </div></div>
@@ -90,12 +109,12 @@ var VENUES = {
   HC:  {name:"Holy Child Catholic Church",       url:"https://maps.google.com/?q=4747+Amboy+Rd,+Staten+Island,+NY+10312"},
   BK:  {name:"St. George Community Center",       url:"https://maps.google.com/?q=6209+11th+Ave,+Brooklyn,+NY+11219"},
   EB:  {name:"St. Mark Coptic Christian Academy", url:"https://maps.google.com/?q=80+David+St,+South+River,+NJ+08882"},
-  CYO: {name:"CYO MIV Court",                     url:"https://maps.google.com/?q=CYO+MIV+Court"},
-  SJN: {name:"St. John Neuman",                   url:"https://maps.google.com/?q=St+John+Neumann+Staten+Island"},
-  LI:  {name:"St. Mark Coptic Center LI",          url:"https://maps.google.com/?q=90+Woodbury+Rd,+Woodbury,+NY+11797"},
+  CYO: {name:"CYO MIV",                           url:"https://maps.google.com/?q=CYO+MIV"},
+  SJN: {name:"St. John Neumann",                  url:"https://maps.google.com/?q=St+John+Neumann"},
+  LI:  {name:"St. Mark Coptic Center LI",         url:"https://maps.google.com/?q=90+Woodbury+Rd,+Woodbury,+NY+11797"},
   GC:  {name:"Kimisis Tis Theotokou Greek Orthodox Church", url:"https://maps.google.com/?q=20+Hillcrest+Rd,+Holmdel,+NJ+07733"},
-  MSK1:{name:"Multi Sports Kingdom — Court #1",     url:"https://maps.google.com/?q=2+Timber+Ln,+Marlboro+Township,+NJ+07746"},
-  MSK2:{name:"Multi Sports Kingdom — Court #2",     url:"https://maps.google.com/?q=2+Timber+Ln,+Marlboro+Township,+NJ+07746"}
+  MSK1:{name:"Multi Sports Kingdom — Court #1",   url:"https://maps.google.com/?q=2+Timber+Ln,+Marlboro+Township,+NJ+07746"},
+  MSK2:{name:"Multi Sports Kingdom — Court #2",   url:"https://maps.google.com/?q=2+Timber+Ln,+Marlboro+Township,+NJ+07746"}
 };
 
 var TEAMS = {
@@ -107,12 +126,10 @@ var TEAMS = {
   "Mens":   ["Bayonne 1 (SASA)","EB","Hatfield","Holmdel","Long Island","Queens","SI1","SI2","Summit"]
 };
 
-// Games are loaded dynamically from data/games.json (synced from your Google Sheet).
 var GAMES = [];
 var GAMES_LOADED = false;
 
 function loadGames() {
-  // Cache-buster so we always see fresh data after the sheet pushes a commit.
   var url = 'data/games.json?_=' + Date.now();
   fetch(url)
     .then(function(res){ if(!res.ok) throw new Error('HTTP '+res.status); return res.json(); })
@@ -123,9 +140,7 @@ function loadGames() {
       if (team) onTeam();
     })
     .catch(function(err){
-      document.getElementById('out').innerHTML =
-        '<div class="empty"><div class="icon">⚠️</div><h3>Could not load games</h3>' +
-        '<p>'+err.message+'<br>Try refreshing in a minute.</p></div>';
+      document.getElementById('out').innerHTML = '<div class="empty"><div class="icon">⚠️</div><h3>Could not load games</h3><p>'+err.message+'</p></div>';
     });
 }
 
@@ -169,7 +184,6 @@ function onTeam(){
   out.innerHTML=h;
 }
 
-// Kick off the load on page open
 loadGames();
 </script>
 </body>
