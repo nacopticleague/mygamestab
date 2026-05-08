@@ -528,17 +528,6 @@
     "s2": ""
   },
   {
-    "t1": "EB (1)",
-    "t2": "Bayonne 1 (SASA)",
-    "div": "College",
-    "date": "2026-05-16",
-    "time": "6:00 PM",
-    "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "Queens",
     "t2": "Long Island",
     "div": "Mens",
@@ -974,6 +963,17 @@
     "date": "2026-06-07",
     "time": "7:00 PM",
     "v": "BK",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
+    "t1": "EB (1)",
+    "t2": "Bayonne 1 (SASA)",
+    "div": "College",
+    "date": "2026-05-16",
+    "time": "6:00 PM",
+    "v": "EB",
     "winner": "",
     "s1": "",
     "s2": ""
