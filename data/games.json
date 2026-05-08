@@ -253,17 +253,6 @@
     "s2": ""
   },
   {
-    "t1": "Bayonne 1 (SASA)",
-    "t2": "Brooklyn",
-    "div": "College",
-    "date": "2026-05-09",
-    "time": "10:00 AM",
-    "v": "CYO",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "Holmdel",
     "t2": "Upstate",
     "div": "College",
@@ -974,6 +963,17 @@
     "date": "2026-06-06",
     "time": "5:00 PM",
     "v": "EB",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
+    "t1": "Bayonne 1 (SASA)",
+    "t2": "Brooklyn",
+    "div": "College",
+    "date": "2026-05-09",
+    "time": "10:00 AM",
+    "v": "CYO",
     "winner": "",
     "s1": "",
     "s2": ""
