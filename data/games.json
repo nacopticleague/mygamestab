@@ -1100,6 +1100,17 @@
     "s2": ""
   },
   {
+    "t1": "Bayonne 2 (VMSJ)",
+    "t2": "Bayonne 1 (SASA)",
+    "div": "College",
+    "date": "2026-06-06",
+    "time": "2:00 PM",
+    "v": "SGG",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "EB (1)",
     "t2": "Holmdel",
     "div": "College",
@@ -1172,17 +1183,6 @@
     "date": "2026-06-06",
     "time": "12:00 PM",
     "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "Bayonne 2 (VMSJ)",
-    "t2": "Bayonne 1 (SASA)",
-    "div": "College",
-    "date": "2026-06-06",
-    "time": "2:00 PM",
-    "v": "SGG",
     "winner": "",
     "s1": "",
     "s2": ""
