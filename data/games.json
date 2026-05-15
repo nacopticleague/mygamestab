@@ -1599,7 +1599,7 @@
     "t2": "Brooklyn",
     "div": "College",
     "date": "2026-06-07",
-    "time": "7:00 PM",
+    "time": "6:00 PM",
     "v": "BK",
     "winner": "",
     "s1": "",
@@ -1623,17 +1623,6 @@
     "date": "2026-06-07",
     "time": "6:00 PM",
     "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "",
-    "t2": "Bayonne 1 (SASA)",
-    "div": "College",
-    "date": "",
-    "time": "",
-    "v": "",
     "winner": "",
     "s1": "",
     "s2": ""
