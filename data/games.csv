@@ -27,7 +27,7 @@ SI1,Philadelphia,College,2026-05-09,3:00 PM,CYO,t1,58,56
 Queens,Long Island,College,2026-05-09,12:00 PM,LI,t1,48,47
 SI2,Summit,Mens,2026-05-09,1:00 PM,CYO,t2,51,62
 Holmdel,SI1,Mens,2026-05-09,2:00 PM,CYO,t1,53,50
-Long Island (1),Long Island (2),HS-NY,2026-05-16,1:00 PM,LI,,,
+Long Island (1),Long Island (2),HS-NY,2026-05-16,1:00 PM,LI,t1,40,10
 Brooklyn (2),Queens,HS-NY,2026-05-16,3:00 PM,BK,,,
 SI1 (2),SI2 (2),HS-NY,2026-05-16,3:00 PM,SJN,,,
 Brooklyn (1),Astoria,HS-NY,2026-05-16,1:00 PM,BK,t2,33,42
