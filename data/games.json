@@ -1100,6 +1100,17 @@
     "s2": ""
   },
   {
+    "t1": "EB (1)",
+    "t2": "EB (3)",
+    "div": "College",
+    "date": "2026-06-28",
+    "time": "7:00 PM",
+    "v": "SGG",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "EB (2)",
     "t2": "Piscataway",
     "div": "College",
@@ -2909,17 +2920,6 @@
     "div": "College",
     "date": "2026-06-28",
     "time": "2:00 PM",
-    "v": "SGG",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "EB (1)",
-    "t2": "EB (3)",
-    "div": "College",
-    "date": "2026-06-28",
-    "time": "7:00 PM",
     "v": "SGG",
     "winner": "",
     "s1": "",
