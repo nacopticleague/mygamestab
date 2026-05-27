@@ -2233,17 +2233,6 @@
     "s2": ""
   },
   {
-    "t1": "Holmdel",
-    "t2": "EB (3)",
-    "div": "College",
-    "date": "2026-06-17",
-    "time": "8:30 PM",
-    "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "EB (1)",
     "t2": "EB (2)",
     "div": "Girls",
@@ -2501,6 +2490,17 @@
     "t2": "EB (3)",
     "div": "College",
     "date": "2026-06-24",
+    "time": "8:30 PM",
+    "v": "EB",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
+    "t1": "Holmdel",
+    "t2": "EB (3)",
+    "div": "College",
+    "date": "2026-06-17",
     "time": "8:30 PM",
     "v": "EB",
     "winner": "",
