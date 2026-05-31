@@ -87,7 +87,7 @@ SI1,SI2,College,2026-05-30,2:00 PM,HC,t1,50,41
 Queens,Bayonne 1 (SASA),Mens,2026-05-30,3:00 PM,HC,,,
 Long Island,SI1,Mens,2026-05-30,6:00 PM,BK,,,
 Hatfield,Holmdel,Mens,2026-05-30,7:00 PM,EB,,,
-EB,SI2,Mens,2026-05-30,8:00 PM,EB,,,
+EB,SI2,Mens,2026-05-30,8:00 PM,EB,t1,55,50
 EB (2),Summit,JHS,2026-05-30,9:00 AM,EB,t2,24,32
 Philadelphia,SI2,JHS,2026-05-30,5:00 PM,EB,t2,21,24
 SI1,Astoria,JHS,2026-05-30,11:00 AM,HC,t1,30,20
