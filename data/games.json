@@ -2343,6 +2343,17 @@
     "s2": ""
   },
   {
+    "t1": "Brooklyn (2)",
+    "t2": "Long Island (1)",
+    "div": "HS-NY",
+    "date": "2026-06-27",
+    "time": "2:00 PM",
+    "v": "BK",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "Bayonne 2 (VMSJ) (1)",
     "t2": "Bayonne 1 (SASA) (2)",
     "div": "HS-NJ",
@@ -2513,17 +2524,6 @@
     "div": "HS-NY",
     "date": "2026-06-27",
     "time": "12:00 PM",
-    "v": "BK",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "Brooklyn (2)",
-    "t2": "Long Island (1)",
-    "div": "HS-NY",
-    "date": "2026-06-27",
-    "time": "2:00 PM",
     "v": "BK",
     "winner": "",
     "s1": "",
