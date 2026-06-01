@@ -803,17 +803,6 @@
     "s2": ""
   },
   {
-    "t1": "SI1 (1)",
-    "t2": "Queens",
-    "div": "HS-NY",
-    "date": "2026-05-30",
-    "time": "7:00 PM",
-    "v": "BK",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "Bayonne 1 (SASA) (2)",
     "t2": "Upstate",
     "div": "HS-NJ",
@@ -2321,6 +2310,17 @@
     "s2": ""
   },
   {
+    "t1": "SI1 (1)",
+    "t2": "Queens",
+    "div": "HS-NY",
+    "date": "2026-06-20",
+    "time": "2:00 PM",
+    "v": "SJN",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "Brooklyn (1)",
     "t2": "Long Island (2)",
     "div": "HS-NY",
@@ -2336,7 +2336,7 @@
     "t2": "SI1 (2)",
     "div": "HS-NY",
     "date": "2026-06-20",
-    "time": "2:00 PM",
+    "time": "4:00 PM",
     "v": "SJN",
     "winner": "",
     "s1": "",
