@@ -2629,6 +2629,17 @@
     "s2": ""
   },
   {
+    "t1": "Piscataway",
+    "t2": "Long Island",
+    "div": "College",
+    "date": "2026-06-28",
+    "time": "4:00 PM",
+    "v": "CYO",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "EB",
     "t2": "Long Island",
     "div": "Mens",
@@ -2907,17 +2918,6 @@
     "t1": "Bayonne 1 (SASA)",
     "t2": "SI2",
     "div": "Mens",
-    "date": "2026-06-28",
-    "time": "4:00 PM",
-    "v": "CYO",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "Piscataway",
-    "t2": "Long Island",
-    "div": "College",
     "date": "2026-06-28",
     "time": "4:00 PM",
     "v": "CYO",
