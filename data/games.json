@@ -2673,17 +2673,6 @@
     "s2": ""
   },
   {
-    "t1": "Bayonne 1 (SASA)",
-    "t2": "SI2",
-    "div": "Mens",
-    "date": "2026-06-27",
-    "time": "2:00 PM",
-    "v": "CYO",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "Upstate",
     "t2": "Queens",
     "div": "Girls",
@@ -2910,6 +2899,17 @@
     "date": "2026-06-28",
     "time": "3:00 PM",
     "v": "SGG",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
+    "t1": "Bayonne 1 (SASA)",
+    "t2": "SI2",
+    "div": "Mens",
+    "date": "2026-06-27",
+    "time": "2:00 PM",
+    "v": "CYO",
     "winner": "",
     "s1": "",
     "s2": ""
