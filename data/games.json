@@ -2244,6 +2244,17 @@
     "s2": ""
   },
   {
+    "t1": "Bayonne 1 (SASA)",
+    "t2": "EB (3)",
+    "div": "College",
+    "date": "2026-06-27",
+    "time": "2:00 PM",
+    "v": "EB",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "SI2",
     "t2": "Long Island",
     "div": "College",
@@ -2601,17 +2612,6 @@
     "div": "College",
     "date": "2026-06-27",
     "time": "1:00 PM",
-    "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "Bayonne 1 (SASA)",
-    "t2": "EB (3)",
-    "div": "College",
-    "date": "2026-06-27",
-    "time": "2:00 PM",
     "v": "EB",
     "winner": "",
     "s1": "",
