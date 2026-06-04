@@ -1342,17 +1342,6 @@
     "s2": ""
   },
   {
-    "t1": "Bayonne 1 (SASA)",
-    "t2": "Long Island",
-    "div": "Mens",
-    "date": "2026-06-06",
-    "time": "12:00 PM",
-    "v": "BK",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "Queens",
     "t2": "SI2",
     "div": "Mens",
@@ -2877,6 +2866,17 @@
     "date": "2026-06-27",
     "time": "4:00 PM",
     "v": "SGG",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
+    "t1": "Bayonne 1 (SASA)",
+    "t2": "Long Island",
+    "div": "Mens",
+    "date": "2026-06-06",
+    "time": "12:00 PM",
+    "v": "BK",
     "winner": "",
     "s1": "",
     "s2": ""
