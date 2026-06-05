@@ -2618,17 +2618,6 @@
     "s2": ""
   },
   {
-    "t1": "Piscataway",
-    "t2": "Long Island",
-    "div": "College",
-    "date": "2026-06-28",
-    "time": "3:00 PM",
-    "v": "CYO",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
     "t1": "EB",
     "t2": "Long Island",
     "div": "Mens",
@@ -2937,12 +2926,12 @@
     "s2": ""
   },
   {
-    "t1": "1899-12-30",
-    "t2": "",
-    "div": "",
-    "date": "",
-    "time": "",
-    "v": "",
+    "t1": "Piscataway",
+    "t2": "Long Island",
+    "div": "College",
+    "date": "2026-06-28",
+    "time": "3:00 PM",
+    "v": "CYO",
     "winner": "",
     "s1": "",
     "s2": ""
