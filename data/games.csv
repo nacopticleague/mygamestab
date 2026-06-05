@@ -100,7 +100,7 @@ EB (1),EB (2),Girls,2026-06-03,7:30 PM,EB,t1,45,16
 EB (1),EB (2),HS-NJ,2026-06-03,8:30 PM,EB,t1,40,26
 EB (1),EB (3),College,2026-06-03,9:30 PM,EB,t1,46,40
 EB (2),Piscataway,College,2026-06-06,3:00 PM,EB,,,
-EB (3),Upstate,College,2026-06-06,5:00 PM,EB,t1,,
+EB (3),Upstate,College,2026-06-06,5:00 PM,EB,t1,1,0
 SI2,Brooklyn,College,2026-06-06,7:00 PM,SJN,,,
 Queens,SI1,College,2026-06-06,3:00 PM,SJN,,,
 Piscataway,Bayonne 2 (VMSJ) (1),HS-NJ,2026-06-06,1:00 PM,SGG,,,
