@@ -1111,17 +1111,6 @@
     "s2": ""
   },
   {
-    "t1": "EB (3)",
-    "t2": "Upstate",
-    "div": "College",
-    "date": "2026-06-06",
-    "time": "5:00 PM",
-    "v": "EB",
-    "winner": "t1",
-    "s1": "1",
-    "s2": "0"
-  },
-  {
     "t1": "SI2",
     "t2": "Brooklyn",
     "div": "College",
@@ -3078,5 +3067,16 @@
     "winner": "",
     "s1": "",
     "s2": ""
+  },
+  {
+    "t1": "EB (3)",
+    "t2": "Upstate",
+    "div": "College",
+    "date": "2026-06-06",
+    "time": "5:00 PM",
+    "v": "EB",
+    "winner": "t1",
+    "s1": "1",
+    "s2": "0"
   }
 ]
