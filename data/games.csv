@@ -108,7 +108,7 @@ EB (1),Philadelphia,HS-NJ,2026-06-06,4:00 PM,EB,t1,66,29
 Makkar,Bayonne 1 (SASA) (1),HS-NJ,2026-06-06,12:00 PM,SGG,t1,54,38
 Holmdel,Bayonne 1 (SASA) (2),HS-NJ,2026-06-06,11:00 AM,SGG,t1,53,33
 Bayonne 2 (VMSJ) (2),Upstate,HS-NJ,2026-06-06,3:00 PM,SGG,t2,2,42
-SI3,Brooklyn,Girls,2026-06-06,4:00 PM,SJN,,,
+SI3,Brooklyn,Girls,2026-06-06,4:00 PM,SJN,t2,4,10
 EB (1),Holmdel,Girls,2026-06-06,11:00 AM,EB,t1,31,20
 Queens,Bayonne 1 (SASA),Girls,2026-06-06,1:00 PM,SJN,t1,35,15
 Makkar,SI2,Girls,2026-06-06,2:00 PM,SGG,t1,27,7
