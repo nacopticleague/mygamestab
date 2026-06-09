@@ -1837,17 +1837,6 @@
     "s2": ""
   },
   {
-    "t1": "EB (1)",
-    "t2": "Upstate",
-    "div": "College",
-    "date": "2026-06-13",
-    "time": "3:00 PM",
-    "v": "EB",
-    "winner": "t1",
-    "s1": "1",
-    "s2": "0"
-  },
-  {
     "t1": "EB (2)",
     "t2": "Bayonne 1 (SASA)",
     "div": "College",
@@ -3074,6 +3063,17 @@
     "div": "College",
     "date": "2026-06-29",
     "time": "5:00 PM",
+    "v": "EB",
+    "winner": "t1",
+    "s1": "1",
+    "s2": "0"
+  },
+  {
+    "t1": "EB (1)",
+    "t2": "Upstate",
+    "div": "College",
+    "date": "2026-06-13",
+    "time": "3:00 PM",
     "v": "EB",
     "winner": "t1",
     "s1": "1",
