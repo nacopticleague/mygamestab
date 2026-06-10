@@ -118,7 +118,7 @@ Queens,SI2,JHS,2026-06-06,2:00 PM,SJN,t1,34,28
 Astoria,Bayonne 1 (SASA),JHS,2026-06-06,12:00 PM,SJN,t2,0,1
 Astoria,Long Island (2),HS-NY,2026-06-06,1:00 PM,LI,t1,68,32
 SI2 (1),Brooklyn (1),HS-NY,2026-06-06,5:00 PM,SJN,,,
-SI2 (2),Brooklyn (2),HS-NY,2026-06-06,6:00 PM,SJN,,,
+SI2 (2),Brooklyn (2),HS-NY,2026-06-06,6:00 PM,SJN,t1,34,10
 Summit,EB,Mens,2026-06-06,4:00 PM,SGG,t2,45,47
 Holmdel,EB (3),HS-NJ,2026-06-07,8:00 PM,EB,t1,52,20
 Bayonne 2 (VMSJ) (1),Bayonne 2 (VMSJ) (2),HS-NJ,2026-06-07,4:00 PM,SGG,t1,33,16
