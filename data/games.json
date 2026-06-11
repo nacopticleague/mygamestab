@@ -2519,17 +2519,6 @@
     "s2": ""
   },
   {
-    "t1": "Upstate",
-    "t2": "Brooklyn",
-    "div": "College",
-    "date": "2026-06-27",
-    "time": "2:00 PM",
-    "v": "BK",
-    "winner": "t2",
-    "s1": "0",
-    "s2": "1"
-  },
-  {
     "t1": "Philadelphia",
     "t2": "Queens",
     "div": "College",
@@ -3074,6 +3063,17 @@
     "div": "College",
     "date": "2026-06-29",
     "time": "3:00 PM",
+    "v": "BK",
+    "winner": "t2",
+    "s1": "0",
+    "s2": "1"
+  },
+  {
+    "t1": "Upstate",
+    "t2": "Brooklyn",
+    "div": "College",
+    "date": "2026-06-27",
+    "time": "2:00 PM",
     "v": "BK",
     "winner": "t2",
     "s1": "0",
