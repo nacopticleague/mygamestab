@@ -1870,17 +1870,6 @@
     "s2": ""
   },
   {
-    "t1": "Upstate",
-    "t2": "Long Island",
-    "div": "College",
-    "date": "2026-06-14",
-    "time": "3:00 PM",
-    "v": "BK",
-    "winner": "t2",
-    "s1": "0",
-    "s2": "1"
-  },
-  {
     "t1": "SI1",
     "t2": "Bayonne 2 (VMSJ)",
     "div": "College",
@@ -3078,5 +3067,16 @@
     "winner": "t1",
     "s1": "1",
     "s2": "0"
+  },
+  {
+    "t1": "Upstate",
+    "t2": "Long Island",
+    "div": "College",
+    "date": "2026-06-14",
+    "time": "3:00 PM",
+    "v": "BK",
+    "winner": "t2",
+    "s1": "0",
+    "s2": "1"
   }
 ]
