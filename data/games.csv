@@ -154,7 +154,7 @@ Astoria,Upstate,Girls,2026-06-13,2:00 PM,BK,,,
 SI1 (1),Long Island (2),HS-NY,2026-06-13,11:00 AM,LI,,,
 SI1 (2),Long Island (2),HS-NY,2026-06-13,1:00 PM,LI,,,
 SI1 (1),Long Island (1),HS-NY,2026-06-13,2:00 PM,LI,,,
-SI1 (2),Long Island (1),HS-NY,2026-06-13,3:00 PM,LI,,,
+SI1 (2),Long Island (1),HS-NY,2026-06-13,3:00 PM,LI,t2,0,1
 SI2 (1),Brooklyn (2),HS-NY,2026-06-13,5:00 PM,BK,,,
 SI2 (2),Queens,HS-NY,2026-06-13,3:00 PM,BK,t2,20,50
 EB (3),Bayonne 2 (VMSJ) (2),HS-NJ,2026-06-13,11:00 AM,EB,t1,39,13
