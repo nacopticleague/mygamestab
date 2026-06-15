@@ -171,7 +171,7 @@ SI1,Long Island,College,2026-06-13,12:00 PM,LI,t1,89,65
 SI2,Bayonne 2 (VMSJ),College,2026-06-13,6:00 PM,BK,t1,29,19
 SI1,Bayonne 2 (VMSJ),College,2026-06-14,4:00 PM,BK,t1,75,38
 EB (3),Brooklyn,College,2026-06-14,5:00 PM,BK,t2,30,47
-SI2,EB (2),College,2026-06-14,4:00 PM,SGG,,,
+SI2,EB (2),College,2026-06-14,4:00 PM,SGG,t2,26,40
 EB (1),Bayonne 1 (SASA),College,2026-06-14,5:00 PM,SGG,t1,67,28
 Queens,Piscataway,College,2026-06-14,7:00 PM,SJN,t1,51,30
 Bayonne 1 (SASA),Summit,Mens,2026-06-14,3:00 PM,SGG,,,
