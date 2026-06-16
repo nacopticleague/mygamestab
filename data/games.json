@@ -2607,6 +2607,17 @@
     "s2": ""
   },
   {
+    "t1": "SI2",
+    "t2": "Hatfield",
+    "div": "Mens",
+    "date": "2026-06-27",
+    "time": "3:00 PM",
+    "v": "CYO",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "Upstate",
     "t2": "Queens",
     "div": "Girls",
@@ -2832,17 +2843,6 @@
     "div": "Mens",
     "date": "2026-06-28",
     "time": "5:00 PM",
-    "v": "CYO",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "SI2",
-    "t2": "Hatfield",
-    "div": "Mens",
-    "date": "2026-06-28",
-    "time": "6:00 PM",
     "v": "CYO",
     "winner": "",
     "s1": "",
