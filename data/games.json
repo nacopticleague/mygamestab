@@ -2805,6 +2805,17 @@
     "s2": ""
   },
   {
+    "t1": "EB (1)",
+    "t2": "Belleville",
+    "div": "Girls",
+    "date": "2026-06-28",
+    "time": "4:00 PM",
+    "v": "EB",
+    "winner": "",
+    "s1": "",
+    "s2": ""
+  },
+  {
     "t1": "SI1",
     "t2": "Queens",
     "div": "Mens",
@@ -2920,17 +2931,6 @@
     "div": "Girls",
     "date": "2026-06-28",
     "time": "3:00 PM",
-    "v": "EB",
-    "winner": "",
-    "s1": "",
-    "s2": ""
-  },
-  {
-    "t1": "EB (1)",
-    "t2": "Belleville",
-    "div": "Girls",
-    "date": "2026-06-28",
-    "time": "4:00 PM",
     "v": "EB",
     "winner": "",
     "s1": "",
