@@ -210,6 +210,7 @@ SI1 (1),Queens,HS-NY,2026-06-20,2:00 PM,SJN,,,
 Brooklyn (1),Long Island (2),HS-NY,2026-06-20,2:00 PM,BK,,,
 SI1 (1),SI1 (2),HS-NY,2026-06-20,5:00 PM,SJN,,,
 Brooklyn (2),Long Island (1),HS-NY,2026-06-20,3:00 PM,BK,,,
+SI2 (1),SI2 (2),HS-NY,2026-06-28,5:00 PM,BK,,,
 Bayonne 2 (VMSJ) (1),Bayonne 1 (SASA) (2),HS-NJ,2026-06-20,11:00 AM,SGG,,,
 Bayonne 1 (SASA) (1),Holmdel,HS-NJ,2026-06-20,12:00 PM,SGG,,,
 Philadelphia,Bayonne 2 (VMSJ) (2),HS-NJ,2026-06-20,4:00 PM,SGG,,,
@@ -274,7 +275,6 @@ Paramus,EB (3),HS-NJ,2026-06-28,9:00 PM,EB,,,
 EB (2),Bayonne 2 (VMSJ) (2),HS-NJ,2026-06-28,8:00 PM,EB,,,
 Paramus,Piscataway,HS-NJ,2026-06-28,7:00 PM,EB,,,
 Makkar,Philadelphia,HS-NJ,2026-06-28,6:00 PM,SGG,,,
-SI2 (1),SI2 (2),HS-NY,2026-06-28,5:00 PM,BK,,,
 EB (3),Upstate,College,2026-06-29,5:00 PM,EB,t1,25,0
 EB (1),Upstate,College,2026-06-29,3:00 PM,EB,t1,25,0
 Upstate,Long Island,College,2026-06-29,3:00 PM,BK,t2,0,25
