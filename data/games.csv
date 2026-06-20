@@ -214,7 +214,7 @@ SI2 (1),SI2 (2),HS-NY,2026-06-20,3:00 PM,SJN,,,
 Bayonne 2 (VMSJ) (1),Bayonne 1 (SASA) (2),HS-NJ,2026-06-20,11:00 AM,SGG,t2,27,31
 Bayonne 1 (SASA) (1),Holmdel,HS-NJ,2026-06-20,12:00 PM,SGG,t2,52,65
 Philadelphia,Bayonne 2 (VMSJ) (2),HS-NJ,2026-06-20,4:00 PM,SGG,,,
-SI1,Belleville,Girls,2026-06-20,10:00 AM,SJN,,,
+SI1,Belleville,Girls,2026-06-20,10:00 AM,SJN,t1,51,21
 SI3,Queens,Girls,2026-06-20,11:00 AM,SJN,t2,4,25
 SI1,Bayonne 1 (SASA),Girls,2026-06-20,12:00 PM,SJN,,,
 Holmdel,Brooklyn,Girls,2026-06-20,1:00 PM,SJN,t1,30,17
