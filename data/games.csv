@@ -227,7 +227,7 @@ EB (1),Holmdel,College,2026-06-24,6:30 PM,EB,t1,62,60
 EB (1),EB (2),College,2026-06-24,8:30 PM,EB,t1,52,46
 Holmdel,EB (3),College,2026-06-24,9:30 PM,EB,t1,88,57
 SI1 (1),Astoria,HS-NY,2026-06-27,1:00 PM,BK,t2,42,44
-SI1 (2),Astoria,HS-NY,2026-06-27,2:00 PM,BK,,,
+SI1 (2),Astoria,HS-NY,2026-06-27,2:00 PM,BK,t2,25,50
 Bayonne 2 (VMSJ),Long Island,College,2026-06-27,12:00 PM,BK,t2,31,58
 Philadelphia,Queens,College,2026-06-27,2:00 PM,CYO,,,
 SI1,EB (1),College,2026-06-27,6:00 PM,EB,,,
