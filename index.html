@@ -7,20 +7,22 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;display:flex;flex-direction:column;}
+html{overflow:hidden;}
+body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;}
 .header{background:#7d1a1a;padding:26px 20px 22px;text-align:center;position:relative;overflow:hidden;}
 .header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c9b5a5,#e07878,#c9b5a5);}
 .header h1{font-family:'Playfair Display',Georgia,serif;font-size:1.55rem;color:#e8b4b4;font-weight:800;letter-spacing:.02em;}
 .header .sub{font-size:.72rem;color:#c98a8a;margin-top:4px;letter-spacing:.12em;font-weight:600;}
 .notice{padding:10px 16px;font-size:.78rem;font-weight:600;color:#5c1010;background:#e8ddd3;text-align:center;border-bottom:1px solid #d0bfaf;}
-.filters{background:#d8c8ba;border-bottom:2px solid #b8a492;padding:16px 16px 14px;}
-.filter-row{display:flex;gap:12px;flex-wrap:wrap;max-width:700px;margin:0 auto;}
-.fg{flex:1;min-width:140px;}
-.fg label{display:block;font-size:.68rem;font-weight:700;color:#5c1010;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px;}
-.fg select{width:100%;padding:9px 12px;border:2px solid #b8a492;border-radius:6px;font-size:.88rem;font-weight:600;color:#5c1010;background:#fff;cursor:pointer;transition:border-color .2s;}
-.fg select:focus{outline:none;border-color:#7d1a1a;box-shadow:0 0 0 3px rgba(125,26,26,.15);}
-.fg select:disabled{opacity:.5;cursor:not-allowed;}
-.main{max-width:700px;margin:0 auto;padding:20px 14px 40px;flex:1;width:100%;}
+.filters{background:#d8c8ba;border-bottom:2px solid #b8a492;padding:16px;overflow-y:auto;max-height:200px;}
+.filter-section{margin-bottom:16px;}
+.filter-section:last-child{margin-bottom:0;}
+.filter-label{display:block;font-size:.68rem;font-weight:700;color:#5c1010;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;}
+.filter-buttons{display:flex;flex-wrap:wrap;gap:8px;}
+.filter-btn{padding:8px 14px;border:2px solid #b8a492;border-radius:6px;font-size:.85rem;font-weight:600;color:#5c1010;background:#fff;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.filter-btn:hover{border-color:#7d1a1a;background:#f8f4f0;}
+.filter-btn.active{border-color:#7d1a1a;background:#7d1a1a;color:#fff;}
+.main{max-width:700px;margin:0 auto;padding:20px 14px 40px;flex:1;width:100%;overflow-y:auto;}
 .empty{background:#fff;border-radius:12px;text-align:center;padding:48px 24px;box-shadow:0 2px 14px rgba(80,20,20,.08);}
 .empty .icon{font-size:2.6rem;margin-bottom:12px;}
 .empty h3{font-family:'Playfair Display',Georgia,serif;color:#7d1a1a;font-size:1.05rem;margin-bottom:6px;}
@@ -34,10 +36,11 @@ body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;
 .day-name{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;font-weight:700;color:#5c1010;white-space:nowrap;}
 .day-count{font-size:.7rem;font-weight:700;color:#fff;background:#7d1a1a;padding:2px 9px;border-radius:10px;white-space:nowrap;}
 .day-line{flex:1;height:1px;background:#b8a492;}
-.card{background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(80,20,20,.08);padding:16px;margin-bottom:12px;border-left:4px solid #7d1a1a;transition:transform .15s,box-shadow .15s;}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(80,20,20,.08);padding:16px;margin-bottom:12px;border-left:4px solid #7d1a1a;transition:transform .15s,box-shadow .15s;display:flex;align-items:center;gap:14px;}
 .card:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(80,20,20,.13);}
 .card.win{border-left-color:#1a7d1a;}
 .card.loss{border-left-color:#a02020;}
+.card-content{flex:1;min-width:0;}
 .card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
 .time-main{font-family:'Playfair Display',Georgia,serif;font-size:.85rem;font-weight:700;color:#7d1a1a;}
 .result-box{text-align:center;min-width:64px;flex-shrink:0;border-left:1px solid #e8ddd3;padding-left:14px;}
@@ -51,7 +54,7 @@ body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;
 .matchup .vs{color:#7d1a1a;font-size:.85rem;font-weight:800;margin:0 6px;}
 .venue-tag{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;font-weight:600;color:#555;}
 .venue-tag a{color:#2d3a8c;text-decoration:underline;}
-@media(max-width:520px){.filter-row{flex-direction:column;}.fg{min-width:100%;}}
+@media(max-width:520px){.filter-buttons{gap:6px;}.filter-btn{padding:6px 10px;font-size:.75rem;}}
 </style>
 </head>
 <body>
@@ -61,25 +64,13 @@ body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;
 </div>
 <div class="notice">Games are still being added.</div>
 <div class="filters">
-  <div class="filter-row">
-    <div class="fg">
-      <label>Division</label>
-      <select id="sdiv" onchange="onDiv()">
-        <option value="">— Select Division —</option>
-        <option value="HS-NY">High School — NY</option>
-        <option value="HS-NJ">High School — NJ</option>
-        <option value="JHS">Junior High (JHS)</option>
-        <option value="Girls">Girls</option>
-        <option value="College">College</option>
-        <option value="Mens">Mens</option>
-      </select>
-    </div>
-    <div class="fg">
-      <label>Team</label>
-      <select id="steam" onchange="onTeam()" disabled>
-        <option value="">— Select Division First —</option>
-      </select>
-    </div>
+  <div class="filter-section">
+    <label class="filter-label">Division</label>
+    <div class="filter-buttons" id="div-buttons"></div>
+  </div>
+  <div class="filter-section">
+    <label class="filter-label">Team</label>
+    <div class="filter-buttons" id="team-buttons"></div>
   </div>
 </div>
 <div class="main"><div id="out">
@@ -105,142 +96,102 @@ var TEAMS = {
   "Mens":   ["Bayonne 1 (SASA)","EB","Hatfield","Holmdel","Long Island","Queens","SI1","SI2","Summit"]
 };
 
-var GAMES = [
-  // ── MAY 2 ──────────────────────────────────────────────────
-  {t1:"Queens",              t2:"Astoria",              div:"HS-NY",  date:"2026-05-02", time:"3:00 PM", v:"BK",  winner:"t1", s1:"44", s2:"37"},
-  {t1:"Brooklyn (1)",        t2:"Brooklyn (2)",          div:"HS-NY",  date:"2026-05-02", time:"7:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"SI2",                 t2:"Astoria",              div:"JHS",    date:"2026-05-02", time:"4:00 PM", v:"BK",  winner:"t1", s1:"38", s2:"19"},
-  {t1:"Queens",              t2:"SI2",                  div:"College",date:"2026-05-02", time:"5:00 PM", v:"BK",  winner:"t2", s1:"40", s2:"50"},
-  {t1:"Brooklyn",            t2:"Bayonne 2 (VMSJ)",     div:"College",date:"2026-05-02", time:"6:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
+var GAMES = [];
 
-  // ── MAY 3 ──────────────────────────────────────────────────
-  {t1:"SI1 (1)",             t2:"SI2 (1)",              div:"HS-NY",  date:"2026-05-03", time:"8:00 PM", v:"HC",  winner:"",   s1:"",   s2:""},
-  {t1:"Upstate",             t2:"Piscataway",           div:"HS-NJ",  date:"2026-05-03", time:"6:00 PM", v:"HC",  winner:"t1", s1:"30", s2:"17"},
-  {t1:"West Side",           t2:"Holmdel",              div:"HS-NJ",  date:"2026-05-03", time:"7:00 PM", v:"HC",  winner:"t2", s1:"41", s2:"49"},
-  {t1:"West Side",           t2:"Bayonne 1 (SASA)",     div:"JHS",    date:"2026-05-03", time:"3:00 PM", v:"HC",  winner:"t1", s1:"31", s2:"26"},
-  {t1:"Belleville",          t2:"Holmdel",              div:"Girls",  date:"2026-05-03", time:"5:00 PM", v:"HC",  winner:"t2", s1:"16", s2:"18"},
-  {t1:"Piscataway",          t2:"Bayonne 1 (SASA)",     div:"College",date:"2026-05-03", time:"4:00 PM", v:"HC",  winner:"t2", s1:"24", s2:"45"},
-
-  // ── MAY 9 ──────────────────────────────────────────────────
-  {t1:"SI1 (2)",             t2:"SI2 (1)",              div:"HS-NY",  date:"2026-05-09", time:"5:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"SI1 (1)",             t2:"SI2 (2)",              div:"HS-NY",  date:"2026-05-09", time:"6:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"Queens",              t2:"Long Island (1)",       div:"HS-NY",  date:"2026-05-09", time:"3:00 PM", v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Makkar",              t2:"Piscataway",           div:"HS-NJ",  date:"2026-05-09", time:"11:00 AM",v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Paramus",             t2:"Bayonne 1 (SASA) (2)", div:"HS-NJ",  date:"2026-05-09", time:"12:00 PM",v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Upstate",             t2:"Bayonne 1 (SASA) (1)", div:"HS-NJ",  date:"2026-05-09", time:"1:00 PM", v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Summit",              t2:"Makkar",               div:"JHS",    date:"2026-05-09", time:"10:00 AM",v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Holmdel",             t2:"West Side",            div:"JHS",    date:"2026-05-09", time:"2:00 PM", v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Queens",              t2:"Astoria",              div:"JHS",    date:"2026-05-09", time:"2:00 PM", v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Philadelphia",        t2:"SI2",                  div:"JHS",    date:"2026-05-09", time:"3:00 PM", v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Queens",              t2:"Astoria",              div:"Girls",  date:"2026-05-09", time:"1:00 PM", v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Belleville",          t2:"Makkar",               div:"Girls",  date:"2026-05-09", time:"4:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"Upstate",             t2:"SI1",                  div:"Girls",  date:"2026-05-09", time:"4:00 PM", v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"SI2",                 t2:"SI3",                  div:"Girls",  date:"2026-05-09", time:"7:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"Bayonne 1 (SASA)",    t2:"Brooklyn",             div:"College",date:"2026-05-09", time:"10:00 AM",v:"CYO", winner:"",   s1:"",   s2:""},
-  {t1:"Holmdel",             t2:"Upstate",              div:"College",date:"2026-05-09", time:"11:00 AM",v:"CYO", winner:"",   s1:"",   s2:""},
-  {t1:"SI1",                 t2:"Philadelphia",         div:"College",date:"2026-05-09", time:"12:00 PM",v:"CYO", winner:"",   s1:"",   s2:""},
-  {t1:"Queens",              t2:"Long Island",          div:"College",date:"2026-05-09", time:"12:00 PM",v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"SI2",                 t2:"Summit",               div:"Mens",   date:"2026-05-09", time:"1:00 PM", v:"CYO", winner:"",   s1:"",   s2:""},
-  {t1:"Holmdel",             t2:"SI1",                  div:"Mens",   date:"2026-05-09", time:"2:00 PM", v:"CYO", winner:"",   s1:"",   s2:""},
-
-  // ── MAY 16 ─────────────────────────────────────────────────
-  {t1:"SI2 (2)",             t2:"Brooklyn (1)",          div:"HS-NY",  date:"2026-05-16", time:"9:00 AM", v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"SI1 (2)",             t2:"Brooklyn (2)",          div:"HS-NY",  date:"2026-05-16", time:"10:00 AM",v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Long Island (1)",     t2:"Long Island (2)",       div:"HS-NY",  date:"2026-05-16", time:"12:00 PM",v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Brooklyn (2)",        t2:"Queens",               div:"HS-NY",  date:"2026-05-16", time:"2:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"SI1 (2)",             t2:"SI2 (2)",              div:"HS-NY",  date:"2026-05-16", time:"2:00 PM", v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Brooklyn (1)",        t2:"Astoria",              div:"HS-NY",  date:"2026-05-16", time:"3:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"EB (1)",              t2:"EB (2)",               div:"HS-NJ",  date:"2026-05-16", time:"10:00 AM",v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"West Side",           t2:"Bayonne 2 (VMSJ) (1)", div:"HS-NJ",  date:"2026-05-16", time:"2:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"Piscataway",          t2:"Bayonne 2 (VMSJ) (2)", div:"HS-NJ",  date:"2026-05-16", time:"3:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"EB (1)",              t2:"EB (2)",               div:"JHS",    date:"2026-05-16", time:"9:00 AM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"West Side",           t2:"Bayonne 1 (SASA)",     div:"JHS",    date:"2026-05-16", time:"11:00 AM",v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Summit",              t2:"Philadelphia",         div:"JHS",    date:"2026-05-16", time:"12:00 PM",v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"SI1",                 t2:"SI2",                  div:"JHS",    date:"2026-05-16", time:"12:00 PM",v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Belleville",          t2:"Brooklyn",             div:"Girls",  date:"2026-05-16", time:"8:00 AM", v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Holmdel",             t2:"Upstate",              div:"Girls",  date:"2026-05-16", time:"11:00 AM",v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"Brooklyn",            t2:"Queens",               div:"Girls",  date:"2026-05-16", time:"1:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"SI1",                 t2:"SI2",                  div:"Girls",  date:"2026-05-16", time:"1:00 PM", v:"SJN", winner:"",   s1:"",   s2:""},
-  {t1:"Long Island",         t2:"Bayonne 1 (SASA)",     div:"College",date:"2026-05-16", time:"11:00 AM",v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"SI2",                 t2:"Piscataway",           div:"College",date:"2026-05-16", time:"12:00 PM",v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"Bayonne 2 (VMSJ)",    t2:"Bayonne 1 (SASA)",     div:"College",date:"2026-05-16", time:"12:00 PM",v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"Upstate",             t2:"Philadelphia",         div:"College",date:"2026-05-16", time:"1:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"Bayonne 2 (VMSJ)",    t2:"Queens",               div:"College",date:"2026-05-16", time:"4:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"SI1",                 t2:"Brooklyn",             div:"College",date:"2026-05-16", time:"5:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"EB (1)",              t2:"Holmdel",              div:"College",date:"2026-05-16", time:"6:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"Queens",              t2:"Long Island",          div:"Mens",   date:"2026-05-16", time:"1:00 PM", v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Summit",              t2:"Hatfield",             div:"Mens",   date:"2026-05-16", time:"4:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"EB",                  t2:"Holmdel",              div:"Mens",   date:"2026-05-16", time:"5:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"SI1",                 t2:"Bayonne 1 (SASA)",     div:"Mens",   date:"2026-05-16", time:"6:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-
-  // ── MAY 17 ─────────────────────────────────────────────────
-  {t1:"EB (2)",              t2:"Holmdel",              div:"HS-NJ",  date:"2026-05-17", time:"2:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"Philadelphia",        t2:"Bayonne 1 (SASA)",     div:"HS-NJ",  date:"2026-05-17", time:"5:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"Long Island (2)",     t2:"Brooklyn (2)",          div:"HS-NY",  date:"2026-05-17", time:"5:00 PM", v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Queens",              t2:"SI1 (2)",              div:"HS-NY",  date:"2026-05-17", time:"6:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"Long Island (1)",     t2:"Brooklyn (1)",          div:"HS-NY",  date:"2026-05-17", time:"6:00 PM", v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Brooklyn",            t2:"Astoria",              div:"Girls",  date:"2026-05-17", time:"4:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"SI2",                 t2:"Holmdel",              div:"College",date:"2026-05-17", time:"3:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"Long Island",         t2:"Brooklyn",             div:"College",date:"2026-05-17", time:"4:00 PM", v:"LI",  winner:"",   s1:"",   s2:""},
-  {t1:"Queens",              t2:"Upstate",              div:"College",date:"2026-05-17", time:"5:00 PM", v:"BK",  winner:"",   s1:"",   s2:""},
-  {t1:"Philadelphia",        t2:"Piscataway",           div:"College",date:"2026-05-17", time:"6:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"SI1",                 t2:"EB",                   div:"Mens",   date:"2026-05-17", time:"4:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"SI2",                 t2:"Holmdel",              div:"Mens",   date:"2026-05-17", time:"7:00 PM", v:"EB",  winner:"",   s1:"",   s2:""},
-  {t1:"Bayonne 1 (SASA)",    t2:"Hatfield",             div:"Mens",   date:"2026-05-17", time:"8:00 PM", v:"EB",  winner:"",   s1:"",   s2:""}
-];
+// Load games from data/games.json
+fetch('../data/games.json')
+  .then(function(response){ return response.json(); })
+  .then(function(data){ GAMES = data; })
+  .catch(function(err){ console.log('Could not load games.json:', err); });
 
 var PLAYOFF_ROUNDS = {
   "2026-07-11":"First Round","2026-07-12":"First Round",
   "2026-07-18":"Semifinals","2026-07-19":"Semifinals",
   "2026-07-26":"Finals"
 };
-function getPlayoffRound(date){return PLAYOFF_ROUNDS[date]||null;}var p=time.split(' '),hm=p[0].split(':'),h=+hm[0],m=hm[1],ap=p[1],eh=h+1,eap=ap;if(h===11&&ap==='AM')eap='PM';if(eh>12)eh-=12;return p[0]+' '+ap+' – '+eh+':'+m+' '+eap;}
+
+function getPlayoffRound(date){return PLAYOFF_ROUNDS[date]||null;}
+function addHour(time){var p=time.split(' '),hm=p[0].split(':'),h=+hm[0],m=hm[1],ap=p[1],eh=h+1,eap=ap;if(h===11&&ap==='AM')eap='PM';if(eh>12)eh-=12;return p[0]+' '+ap+' – '+eh+':'+m+' '+eap;}
 function fmtDateLong(d){return new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});}
 function timeSort(a,b){function to24(t){var p=t.split(' '),hm=p[0].split(':'),h=+hm[0],m=+hm[1];if(p[1]==='PM'&&h!==12)h+=12;if(p[1]==='AM'&&h===12)h=0;return h*60+m;}return to24(a.time)-to24(b.time);}
-function onDiv(){
-  var div=document.getElementById('sdiv').value,ts=document.getElementById('steam');
-  ts.innerHTML='<option value="">— Select Team —</option>';
-  if(div&&TEAMS[div]){TEAMS[div].forEach(function(t){var o=document.createElement('option');o.value=t;o.text=t;ts.appendChild(o);});ts.disabled=false;}
-  else{ts.disabled=true;}
-  document.getElementById('out').innerHTML='<div class="empty"><div class="icon">🏀</div><h3>Find Your Team\'s Schedule</h3><p>Now select your team.</p></div>';
+
+var selectedDiv = '';
+var selectedTeam = '';
+
+function initFilters(){
+  var divHtml='';
+  Object.keys(TEAMS).sort().forEach(function(div){
+    divHtml+='<button class="filter-btn" onclick="selectDiv(\''+div+'\')">'+div+'</button>';
+  });
+  document.getElementById('div-buttons').innerHTML=divHtml;
 }
-function onTeam(){
-  var div=document.getElementById('sdiv').value,team=document.getElementById('steam').value,out=document.getElementById('out');
-  if(!team||!div)return;
-  var f=GAMES.filter(function(g){return g.div===div&&(g.t1===team||g.t2===team);}).sort(timeSort);
-  if(!f.length){out.innerHTML='<div class="empty"><div class="icon">📅</div><h3>No Games Yet</h3><p>Check back soon.</p></div>';return;}
+
+function selectDiv(div){
+  selectedDiv=div;
+  selectedTeam='';
+  var btns=document.getElementById('div-buttons').querySelectorAll('.filter-btn');
+  btns.forEach(function(b){b.classList.remove('active');});
+  event.target.classList.add('active');
+  
+  var teamHtml='';
+  TEAMS[div].forEach(function(t){
+    teamHtml+='<button class="filter-btn" onclick="selectTeam(\''+t+'\')">'+t+'</button>';
+  });
+  document.getElementById('team-buttons').innerHTML=teamHtml;
+  renderGames();
+}
+
+function selectTeam(team){
+  selectedTeam=team;
+  var btns=document.getElementById('team-buttons').querySelectorAll('.filter-btn');
+  btns.forEach(function(b){b.classList.remove('active');});
+  event.target.classList.add('active');
+  renderGames();
+}
+
+function renderGames(){
+  var out=document.getElementById('out');
+  if(!selectedTeam||!selectedDiv){
+    out.innerHTML='<div class="empty"><div class="icon">🏀</div><h3>Find Your Team\'s Schedule</h3><p>Select your division and team above<br>to view your team schedule.</p></div>';
+    return;
+  }
+  
+  var f=GAMES.filter(function(g){return g.div===selectedDiv&&(g.t1===selectedTeam||g.t2===selectedTeam);}).sort(timeSort);
+  if(!f.length){
+    out.innerHTML='<div class="empty"><div class="icon">📅</div><h3>No Games Yet</h3><p>Check back soon.</p></div>';
+    return;
+  }
+  
   var wins=0,losses=0;
-  f.forEach(function(g){if(!g.winner)return;var iWon=(g.winner==='t1'&&g.t1===team)||(g.winner==='t2'&&g.t2===team);if(iWon)wins++;else losses++;});
+  f.forEach(function(g){if(!g.winner)return;var iWon=(g.winner==='t1'&&g.t1===selectedTeam)||(g.winner==='t2'&&g.t2===selectedTeam);if(iWon)wins++;else losses++;});
   var record=(wins>0||losses>0)?' &nbsp;|&nbsp; '+wins+'W – '+losses+'L':'';
-  var h='<div class="statsbar"><div class="badge"><div class="dot"></div>'+team+'</div><div class="cnt">'+f.length+' game'+(f.length!==1?'s':'')+' &middot; '+div+record+'</div></div>';
-  var by={};f.forEach(function(g){if(!by[g.date])by[g.date]=[];by[g.date].push(g);});
+  var h='<div class="statsbar"><div class="badge"><div class="dot"></div>'+selectedTeam+'</div><div class="cnt">'+f.length+' game'+(f.length!==1?'s':'')+' &middot; '+selectedDiv+record+'</div></div>';
+  
+  var by={};
+  f.forEach(function(g){if(!by[g.date])by[g.date]=[];by[g.date].push(g);});
   Object.keys(by).sort().forEach(function(date){
     var games=by[date].sort(timeSort);
     var round=getPlayoffRound(date);
-    var dayClass=round?' playoff-day':'';
-    h+='<div class="day-section"><div class="day-header '+dayClass+'"><span class="day-name">'+fmtDateLong(date)+'</span><span class="day-count">'+games.length+' game'+(games.length!==1?'s':'')+'</span><div class="day-line"></div></div>';
+    h+='<div class="day-section"><div class="day-header"><span class="day-name">'+fmtDateLong(date)+'</span><span class="day-count">'+games.length+' game'+(games.length!==1?'s':'')+'</span><div class="day-line"></div></div>';
     if(round)h+='<div style="font-size:.75rem;font-weight:700;color:#b8860b;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;">🏆 '+round+'</div>';
     games.forEach(function(g){
       var tr=addHour(g.time),vn=VENUES[g.v],vhtml=vn?'<span class="venue-tag">📍 <a href="'+vn.url+'" target="_blank">'+vn.name+'</a></span>':'';
-      var opp=g.t1===team?g.t2:g.t1,cc='',rc='tbd',rt='TBD',scoreHtml='';
-      if(round){
-        cc=' playoff';
-        rc='playoff-tbd';
-      }
+      var opp=g.t1===selectedTeam?g.t2:g.t1,cc='',rc='tbd',rt='TBD',scoreHtml='';
       if(g.winner){
-        var iWon=(g.winner==='t1'&&g.t1===team)||(g.winner==='t2'&&g.t2===team);
-        if(round){rc=iWon?'playoff-w':'playoff-l';cc=iWon?' playoff-win':' playoff-loss';}
-        else{rc=iWon?'w':'l';cc=iWon?' win':' loss';}
+        var iWon=(g.winner==='t1'&&g.t1===selectedTeam)||(g.winner==='t2'&&g.t2===selectedTeam);
+        rc=iWon?'w':'l';
+        cc=iWon?' win':' loss';
         rt=iWon?'W':'L';
         var my=iWon?(g.winner==='t1'?g.s1:g.s2):(g.winner==='t1'?g.s2:g.s1),op=iWon?(g.winner==='t1'?g.s2:g.s1):(g.winner==='t1'?g.s1:g.s2);
         if(my)scoreHtml='<div class="result-score">'+my+' – '+op+'</div>';
       }
-      h+='<div class="card'+cc+'" style="display:flex;align-items:center;gap:14px;">';
-      h+='<div style="flex:1;min-width:0;">';
-      if(round)h+='<div class="playoff-round">'+round+'</div>';
+      h+='<div class="card'+cc+'">';
+      h+='<div class="card-content">';
+      if(round)h+='<div style="font-size:.7rem;font-weight:700;color:#b8860b;text-transform:uppercase;margin-bottom:6px;">🏆 '+round+'</div>';
       h+='<div class="card-top"><div class="time-main">'+tr+'</div></div>';
-      h+='<div class="matchup"><strong>'+team+'</strong><span class="vs">vs.</span>'+opp+'</div>';
-      h+='<div>'+vhtml+'</div></div>';
+      h+='<div class="matchup"><strong>'+selectedTeam+'</strong><span class="vs">vs.</span>'+opp+'</div>';
+      h+='<div>'+vhtml+'</div>';
+      h+='</div>';
       h+='<div class="result-box"><div class="result-label">Result</div><div class="result-badge '+rc+'">'+rt+'</div>'+scoreHtml+'</div>';
       h+='</div>';
     });
@@ -248,6 +199,8 @@ function onTeam(){
   });
   out.innerHTML=h;
 }
+
+initFilters();
 </script>
 </body>
 </html>
