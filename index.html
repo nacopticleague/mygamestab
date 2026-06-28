@@ -22,6 +22,9 @@ body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;
 .filter-btn{padding:8px 14px;border:2px solid #b8a492;border-radius:6px;font-size:.85rem;font-weight:600;color:#5c1010;background:#fff;cursor:pointer;transition:all .2s;white-space:nowrap;}
 .filter-btn:hover{border-color:#7d1a1a;background:#f8f4f0;}
 .filter-btn.active{border-color:#7d1a1a;background:#7d1a1a;color:#fff;}
+.team-dropdown{width:100%;max-width:300px;padding:9px 12px;border:2px solid #b8a492;border-radius:6px;font-size:.88rem;font-weight:600;color:#5c1010;background:#fff;cursor:pointer;font-family:'Source Sans 3',sans-serif;}
+.team-dropdown:focus{outline:none;border-color:#7d1a1a;box-shadow:0 0 0 3px rgba(125,26,26,.15);}
+.team-dropdown:disabled{opacity:.5;cursor:not-allowed;background:#f0e8e0;}
 .main{max-width:700px;margin:0 auto;padding:20px 14px 40px;flex:1;width:100%;overflow-y:auto;}
 .empty{background:#fff;border-radius:12px;text-align:center;padding:48px 24px;box-shadow:0 2px 14px rgba(80,20,20,.08);}
 .empty .icon{font-size:2.6rem;margin-bottom:12px;}
@@ -62,7 +65,7 @@ body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;
   <h1>🏀 My Games</h1>
   <div class="sub">NA Coptic League · 2026 Season · May 2026 – July 2026</div>
 </div>
-<div class="notice">Games are still being added.</div>
+<div class="notice">Playoff Season Games from July 11, 2026 - July 26, 2026</div>
 <div class="filters">
   <div class="filter-section">
     <label class="filter-label">Division</label>
@@ -70,7 +73,9 @@ body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;
   </div>
   <div class="filter-section">
     <label class="filter-label">Team</label>
-    <div class="filter-buttons" id="team-buttons"></div>
+    <select id="team-select" class="team-dropdown" onchange="selectTeam(this.value)" disabled>
+      <option value="">— Select Division First —</option>
+    </select>
   </div>
 </div>
 <div class="main"><div id="out">
@@ -133,19 +138,20 @@ function selectDiv(div){
   btns.forEach(function(b){b.classList.remove('active');});
   event.target.classList.add('active');
   
-  var teamHtml='';
+  var ts=document.getElementById('team-select');
+  ts.innerHTML='<option value="">— Select Team —</option>';
   TEAMS[div].forEach(function(t){
-    teamHtml+='<button class="filter-btn" onclick="selectTeam(\''+t+'\')">'+t+'</button>';
+    var o=document.createElement('option');
+    o.value=t;
+    o.text=t;
+    ts.appendChild(o);
   });
-  document.getElementById('team-buttons').innerHTML=teamHtml;
+  ts.disabled=false;
   renderGames();
 }
 
 function selectTeam(team){
   selectedTeam=team;
-  var btns=document.getElementById('team-buttons').querySelectorAll('.filter-btn');
-  btns.forEach(function(b){b.classList.remove('active');});
-  event.target.classList.add('active');
   renderGames();
 }
 
