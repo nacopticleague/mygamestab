@@ -99,7 +99,7 @@ var TEAMS = {
 var GAMES = [];
 
 // Load games from data/games.json
-fetch('../data/games.json')
+fetch('data/games.json')
   .then(function(response){ return response.json(); })
   .then(function(data){ GAMES = data; })
   .catch(function(err){ console.log('Could not load games.json:', err); });
