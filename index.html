@@ -52,6 +52,18 @@ body{font-family:'Source Sans 3',sans-serif;background:#ffffff;min-height:100vh;
 .result-badge.w{background:#edf7ed;color:#1a7d1a;border:1.5px solid #1a7d1a;}
 .result-badge.l{background:#fdf0f0;color:#a02020;border:1.5px solid #a02020;}
 .result-badge.tbd{background:#f5f0eb;color:#b8a492;border:1.5px solid #d8c8ba;}
+/* ── PLAYOFF DESIGN ───────────────────────────────── */
+.card.playoff{border-left-color:#c8960c;background:linear-gradient(100deg,#fffdf4 0%,#fff 55%);box-shadow:0 2px 14px rgba(184,134,11,.18);position:relative;}
+.card.playoff::before{content:'';position:absolute;top:0;right:0;width:60px;height:60px;background:radial-gradient(circle at top right,rgba(212,160,23,.12),transparent 70%);border-radius:0 12px 0 0;pointer-events:none;}
+.card.playoff.win{border-left-color:#1a7d1a;}
+.card.playoff.loss{border-left-color:#a02020;}
+.card.playoff:hover{box-shadow:0 4px 20px rgba(184,134,11,.26);}
+.playoff-badge{display:inline-block;font-size:.62rem;font-weight:800;color:#fff;background:linear-gradient(135deg,#e0b020,#b8860b);padding:3px 11px;border-radius:11px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:9px;box-shadow:0 1px 4px rgba(184,134,11,.3);}
+.result-badge.ptbd{background:#fdf6e0;color:#b8860b;border:1.5px solid #e0b020;}
+.day-header.playoff-day .day-name{color:#b8860b;}
+.day-header.playoff-day .day-count{background:linear-gradient(135deg,#e0b020,#b8860b);}
+.day-header.playoff-day .day-line{background:linear-gradient(90deg,#e0b020,#d8c8ba);}
+.round-header{font-size:.72rem;font-weight:800;color:#b8860b;letter-spacing:.1em;text-transform:uppercase;margin:-4px 0 12px;display:flex;align-items:center;gap:6px;}
 .result-score{font-size:.72rem;font-weight:700;color:#555;margin-top:3px;}
 .matchup{font-weight:700;font-size:1.05rem;color:#222;line-height:1.4;margin-bottom:8px;}
 .matchup .vs{color:#7d1a1a;font-size:.85rem;font-weight:800;margin:0 6px;}
@@ -178,22 +190,23 @@ function renderGames(){
   Object.keys(by).sort().forEach(function(date){
     var games=by[date].sort(timeSort);
     var round=getPlayoffRound(date);
-    h+='<div class="day-section"><div class="day-header"><span class="day-name">'+fmtDateLong(date)+'</span><span class="day-count">'+games.length+' game'+(games.length!==1?'s':'')+'</span><div class="day-line"></div></div>';
-    if(round)h+='<div style="font-size:.75rem;font-weight:700;color:#b8860b;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;">🏆 '+round+'</div>';
+    var dayCls=round?' playoff-day':'';
+    h+='<div class="day-section"><div class="day-header'+dayCls+'"><span class="day-name">'+fmtDateLong(date)+'</span><span class="day-count">'+games.length+' game'+(games.length!==1?'s':'')+'</span><div class="day-line"></div></div>';
+    if(round)h+='<div class="round-header">🏆 '+round+'</div>';
     games.forEach(function(g){
       var tr=addHour(g.time),vn=VENUES[g.v],vhtml=vn?'<span class="venue-tag">📍 <a href="'+vn.url+'" target="_blank">'+vn.name+'</a></span>':'';
-      var opp=g.t1===selectedTeam?g.t2:g.t1,cc='',rc='tbd',rt='TBD',scoreHtml='';
+      var opp=g.t1===selectedTeam?g.t2:g.t1,cc=round?' playoff':'',rc=round?'ptbd':'tbd',rt='TBD',scoreHtml='';
       if(g.winner){
         var iWon=(g.winner==='t1'&&g.t1===selectedTeam)||(g.winner==='t2'&&g.t2===selectedTeam);
         rc=iWon?'w':'l';
-        cc=iWon?' win':' loss';
+        cc=(round?' playoff':'')+(iWon?' win':' loss');
         rt=iWon?'W':'L';
         var my=iWon?(g.winner==='t1'?g.s1:g.s2):(g.winner==='t1'?g.s2:g.s1),op=iWon?(g.winner==='t1'?g.s2:g.s1):(g.winner==='t1'?g.s1:g.s2);
         if(my)scoreHtml='<div class="result-score">'+my+' – '+op+'</div>';
       }
       h+='<div class="card'+cc+'">';
       h+='<div class="card-content">';
-      if(round)h+='<div style="font-size:.7rem;font-weight:700;color:#b8860b;text-transform:uppercase;margin-bottom:6px;">🏆 '+round+'</div>';
+      if(round)h+='<div class="playoff-badge">🏆 '+round+'</div>';
       h+='<div class="card-top"><div class="time-main">'+tr+'</div></div>';
       h+='<div class="matchup"><strong>'+selectedTeam+'</strong><span class="vs">vs.</span>'+opp+'</div>';
       h+='<div>'+vhtml+'</div>';
